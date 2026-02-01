@@ -17,7 +17,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Md Sahil Alam | Software Engineer",
   description:
-    "Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB.",
+    "Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB. (MERN stack)",
+  icons: {
+    icon: "/pic.jpg",
+  },
+  openGraph: {
+    title: "Md Sahil Alam | Software Engineer",
+    description:
+      "Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB. (MERN stack)",
+    images: [
+      {
+        url: "/pic.jpg",
+        width: 800,
+        height: 600,
+        alt: "Md Sahil Alam",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
