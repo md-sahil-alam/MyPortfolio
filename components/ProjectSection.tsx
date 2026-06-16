@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import React, { useRef } from "react";
 import ScrollFloat from "@/components/ScrollFloat";
 import { motion, useTransform, useScroll, MotionValue } from "motion/react";
@@ -11,7 +11,6 @@ import {
   SiNodedotjs,
   SiMongodb,
   SiTypescript,
-  SiFigma,
 } from "react-icons/si";
 import { IconType } from "react-icons";
 
@@ -23,38 +22,35 @@ interface Project {
   tech: IconType[];
   github: string;
   live: string;
+  image: string;
 }
 
 const projects: Project[] = [
   {
     id: 1,
-    title: "Civic Eye",
-    category: "Full Stack App",
+    title: "PG Near",
+    category: "Startup • Full Stack",
     description:
-      "A crowdsourced platform for reporting civic issues like potholes and garbage. Features geolocation tracking and admin dashboard.",
-    tech: [SiReact, SiNodedotjs, SiMongodb, SiTailwindcss],
-    github: "https://github.com",
-    live: "https://demo.com",
+      "Founded and built PG Near, a platform that helps students and working professionals discover verified PG accommodations across India. SEO-optimized location pages, property listings, and a scalable full-stack architecture focused on user experience and growth.",
+    tech: [SiNextdotjs, SiReact, SiTypescript, SiMongodb, SiTailwindcss],
+    github: "https://github.com/md-sahil-alam/pgnear",
+    live: "https://www.pgnear.in",
+    image:
+      "https://res.cloudinary.com/dd1rxc66q/image/upload/v1781598184/pgnear.png",
   },
+
   {
     id: 2,
-    title: "Let's Date",
-    category: "E-Commerce",
+    title: "Civic Reporter",
+    category: "Full Stack",
     description:
-      "A premium D2C website for a healthy chocolate brand. Integrated with payment gateways and a custom interactive 3D product viewer.",
-    tech: [SiNextdotjs, SiTypescript, SiFigma, SiTailwindcss],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 3,
-    title: "DevPortfolio V2",
-    category: "Portfolio",
-    description:
-      "A high-performance personal portfolio featuring bento grids, sticky scroll animations, and dark mode.",
-    tech: [SiReact, SiTailwindcss],
-    github: "#",
-    live: "#",
+      "Ai Powered crowdsourced civic issue reporting platform that enables citizens to report potholes, garbage dumps, water leakage, and other public infrastructure problems. Includes location-based reporting, issue tracking, and an administrative dashboard for efficient resolution management.",
+    tech: [SiReact, SiNodedotjs, SiMongodb, SiTailwindcss],
+    github:
+      "https://github.com/md-sahil-alam/Crowed-Sourced-Civic-Issue-Reporting",
+    live: "https://github.com/md-sahil-alam/Crowed-Sourced-Civic-Issue-Reporting",
+    image:
+      "https://res.cloudinary.com/dd1rxc66q/image/upload/v1781598787/civicreporter.png",
   },
 ];
 
@@ -63,14 +59,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="group relative h-100 w-full md:h-[500px] md:w-90% overflow-hidden bg-neutral-100 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-3xl flex flex-col md:flex-row flex-shrink-0 transition-all hover:border-emerald-500/50">
       {/* Top: Image Area */}
-      <div className="relative h-full w-full md:w-1/2 overflow-hidden bg-neutral-800">
+      <div className="relative h-full w-full md:w-90% overflow-hidden bg-neutral-800">
         <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent opacity-60 z-10" />
 
         {/* Placeholder for Image - Replace with <Image /> when ready */}
-        <div className="w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-          <span className="text-neutral-500 text-sm md:text-base">
-            {project.title} Preview
-          </span>
+
+        <div className="relative w-full h-full overflow-hidden md:group-hover:scale-105 transition-transform duration-500">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            priority={project.id === 1}
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
 
         <span className="absolute top-4 left-4 z-20 px-3 py-1 text-xs font-bold tracking-widest uppercase bg-emerald-500 text-black rounded-full">
@@ -125,7 +126,7 @@ const ProjectSection = () => {
   });
 
   // Transform for Desktop Only
-  const x = useTransform(scrollYProgress, [0, 1], ["30%", "-185%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["30%", "-95%"]);
 
   return (
     <section className="bg-white dark:bg-zinc-950 relative" id="project">

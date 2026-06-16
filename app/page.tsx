@@ -70,19 +70,19 @@ export default function Home() {
               Md Sahil Alam
             </h1>
 
-            <p className=" pt-5  tracking-tight text-gray-600  md:text-xl md:pt-8 leading-tight md:leading-relaxed dark:text-gray-300 text-pretty ">
-              <strong className="text-emerald-500">Bangalore</strong> based
-              Software Engineer building
-              <strong> real world </strong>SEO friendly
-              <strong className="text-emerald-500">
-                {" "}
-                full-stack products{" "}
-              </strong>{" "}
-              with a
-              <strong className="text-emerald-500">
-                {" "}
-                strong engineering mindset.
+            <p className="pt-5 tracking-tight text-gray-600 md:text-xl md:pt-8 leading-tight md:leading-relaxed dark:text-gray-300 text-pretty">
+              Founder of{" "}
+              <strong className="text-emerald-500 underline decoration-emerald-500/50 decoration-2 underline-offset-4 italic">
+                <a href="http://www.pgnear.in" target="_blank">
+                  PG Near
+                </a>
               </strong>
+              , helping students discover verified PG accommodations, and a{" "}
+              <strong className="text-emerald-500">
+                Bangalore-based Software Engineer
+              </strong>{" "}
+              building SEO-friendly <strong>full-stack products</strong> that
+              solve real-world problems.
             </p>
 
             <p className=" pt-3 md:text-xl md:pt-5 text-pretty text-neutral-500 dark:text-neutral-300 tracking-tight [word-spacing:10px]">

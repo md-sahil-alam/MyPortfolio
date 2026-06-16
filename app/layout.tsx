@@ -15,16 +15,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Md Sahil Alam | Software Engineer",
+  title: "Md Sahil Alam | Founder of PG Near | Software Engineer",
   description:
-    "Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB. (MERN stack)",
+    "Md sahil Alam is Founder of PG Near, Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB. (MERN stack)",
   icons: {
     icon: "/pic.jpg",
   },
   openGraph: {
-    title: "Md Sahil Alam | Software Engineer",
+    title: "Md Sahil Alam | Founder of PG Near | Software Engineer",
     description:
-      "Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB. (MERN stack)",
+      "Md Sahil alam is Founder of PG Near, Bangalore based Software Engineer building real-world full-stack products with a strong engineering mindset. Experienced with Next.js, React, Node.js, and MongoDB. (MERN stack)",
     images: [
       {
         url: "/pic.jpg",
